@@ -108,7 +108,7 @@ async function getDownload()
         let response = await fetch(`assets/download/${lang}.json`);
         if(!response.ok)
         {
-            response = await fetch("assets/download/index.json");
+            response = await fetch("assets/download/en.json");
             if(!response.ok)
             {
                 throw new Error(`Couldn't fetch ${response.url}`);
