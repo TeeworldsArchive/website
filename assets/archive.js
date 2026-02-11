@@ -167,7 +167,7 @@ async function getDownload()
                 {
                     const itemDateDesc = document.createElement("p");
                     itemDateDesc.className = "date l10n";
-                    itemDateDesc.textContent = "Build date: ";
+                    itemDateDesc.textContent = "Build date:";
                     itemDownloadInfo.appendChild(itemDateDesc);
                 }
                 {
