@@ -9,7 +9,7 @@ async function applyTranslations()
     const lang = getBrowserLanguage();
     if(lang == "en")
         return;
-    const localeUrl = `assets/l10n/${encodeURIComponent(lang)}.json`;
+    const localeUrl = `/assets/l10n/${encodeURIComponent(lang)}.json`;
 
     try
     {
@@ -52,7 +52,7 @@ async function getNews()
 
     try
     {
-        const response = await fetch("assets/news/index.json");
+        const response = await fetch("/assets/news/index.json");
         if(!response.ok)
         {
             throw new Error("Couldn't fetch index.json");
@@ -75,10 +75,10 @@ async function getNews()
                 itemDate.textContent = `${item.date} by ${item.postby}`;
                 itemNews.appendChild(itemDate);
             }
-            let textResponse = await fetch(`assets/news/${item.date}.${lang}.md`);
+            let textResponse = await fetch(`/assets/news/${item.date}.${lang}.md`);
             if(!textResponse.ok)
             {
-                textResponse = await fetch(`assets/news/${item.date}.en.md`);
+                textResponse = await fetch(`/assets/news/${item.date}.en.md`);
                 if(!textResponse.ok)
                 {
                     throw new Error(`Couldn't fetch ${textResponse.url}`);
@@ -105,10 +105,10 @@ async function getDownload()
 
     try
     {
-        let response = await fetch(`assets/download/${lang}.json`);
+        let response = await fetch(`/assets/download/${lang}.json`);
         if(!response.ok)
         {
-            response = await fetch("assets/download/en.json");
+            response = await fetch("/assets/download/en.json");
             if(!response.ok)
             {
                 throw new Error(`Couldn't fetch ${response.url}`);
