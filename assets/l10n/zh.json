@@ -1,0 +1,30 @@
+[
+    {
+        "key": "News",
+        "value": "新闻"
+    },
+    {
+        "key": "Download",
+        "value": "下载"
+    },
+    {
+        "key": "Website of TeeworldsArchive is done!",
+        "value": "TeeworldsArchive的网站现已完成！"
+    },
+    {
+        "key": "Build date: ",
+        "value": "构建日期："
+    },
+    {
+        "key": "Source (tar.gz)",
+        "value": "源代码（tar.gz）"
+    },
+    {
+        "key": "Source (zip)",
+        "value": "源代码（zip）"
+    },
+    {
+        "key": "Copyright (C) Teeworlds Archive Project Contributors",
+        "value": "Copyright (C) Teeworlds Archive项目贡献者"
+    }
+]

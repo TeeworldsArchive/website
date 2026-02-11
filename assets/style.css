@@ -1,0 +1,164 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: transform 0.2s ease, padding 0.2s ease;
+    font-family: 'Noto Sans SC', 'Source Han Sans', '思源黑体';
+}
+
+.mainview
+{
+    width: 50%;
+    margin: 5vh auto 0;
+    margin-bottom: 5vh;
+    padding: 3em;
+    border-radius: 0.8em;
+    background-color: whitesmoke;
+    box-shadow: 0 12px 12px rgba(0,0,0,0.1);
+    position: relative;
+    min-height: 70vh;
+    color: #333;
+    font-size: 75%;
+}
+
+.headers {
+    display: flex;
+    justify-content: left;
+    gap: 8px;
+    margin: 0 auto 0;
+    width: 50%;
+    position: relative;
+    top: 5vh;
+}
+
+.headers .logo {
+    display: flex;
+    background: whitesmoke;
+    border-bottom: none;
+    border-radius: 0.5em 0.5em 0 0;
+    padding-right: 0.5em;
+    transform: translateY(4px);
+    align-items: center;
+}
+
+.headers .logo .icon {
+    background-image: url("icon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 5vh;
+    width: 5vh;
+}
+
+.headers .logo p {
+    color: #333;
+    font-weight: bold;
+}
+
+.headers a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5em 1em;
+    background: whitesmoke;
+    border-bottom: none;
+    border-radius: 0.5em 0.5em 0 0;
+    font-weight: bold;
+    transform: translateY(4px);
+}
+
+.headers a:hover {
+    transform: translateY(0);
+}
+
+.background {
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.headers a.active {
+    background: white;
+}
+
+.news {
+    margin-bottom: 2vh;
+}
+
+.news .date-author {
+    font-size: 75%;
+    color: #555;
+}
+
+.news h1 {
+    color: #AA7700;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+}
+
+.download {
+    margin-bottom: 2vh;
+    display: flex;
+    align-items: flex-start;
+}
+
+.download .date {
+    display: inline;
+    font-size: 60%;
+    color: #AA7700;
+}
+
+.download .description {
+    display: inline;
+    color: #555;
+}
+
+.download h1 {
+    color: #AA7700;
+    margin-bottom: 0.5vh;
+}
+
+.download .download-links {
+    gap: 1em;
+    margin-top: 2vh;
+    margin-bottom: 0.5em;
+    padding-right: 0.8vw;
+    border-right: 2px solid #ccc;
+}
+
+.download .download-info {
+    padding-left: 0.8vw;
+}
+
+.download a {
+    font-size: 60%;
+    text-decoration: none;
+    color: #552200;
+    display: block;
+}
+
+.download a:hover {
+    transform: translateY(-2px);
+}
+
+.copyleft {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #333;
+    font-size: 1em;
+    font: bold;
+    z-index: 1000;
+}

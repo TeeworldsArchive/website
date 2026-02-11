@@ -1,0 +1,12 @@
+[
+    {
+        "version": "Nightly Build",
+        "date": "Who knows?",
+        "description": "Although this is named 'Nightly Build', it's built for every commit which pushed to the main branch",
+        "windows": "https://github.com/TeeworldsArchive/teeworlds/releases/download/nightly/teeworlds-archive-0.7.6-win64.zip",
+        "linux": "https://github.com/TeeworldsArchive/teeworlds/releases/download/nightly/teeworlds-archive-0.7.6-linux_x86_64.tar.xz",
+        "macos": "https://github.com/TeeworldsArchive/teeworlds/releases/download/nightly/teeworlds-archive-0.7.6-macos.dmg",
+        "source_zip": "https://github.com/TeeworldsArchive/teeworlds/archive/refs/tags/nightly.zip",
+        "source_tar": "https://github.com/TeeworldsArchive/teeworlds/archive/refs/tags/nightly.tar.gz"
+    }
+]

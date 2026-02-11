@@ -1,0 +1,12 @@
+[
+    {
+        "version": "每晚构建",
+        "date": "谁知道？",
+        "description": "尽管这个叫“每晚构建” 它实际上会给每个给主分支的提交构建",
+        "windows": "https://downloadgit.teeworlds.wiki/TeeworldsArchive/teeworlds/releases/download/nightly/teeworlds-archive-0.7.6-win64.zip",
+        "linux": "https://downloadgit.teeworlds.wiki/TeeworldsArchive/teeworlds/releases/download/nightly/teeworlds-archive-0.7.6-linux_x86_64.tar.xz",
+        "macos": "https://downloadgit.teeworlds.wiki/TeeworldsArchive/teeworlds/releases/download/nightly/teeworlds-archive-0.7.6-macos.dmg",
+        "source_zip": "https://downloadgit.teeworlds.wiki/TeeworldsArchive/teeworlds/archive/refs/tags/nightly.zip",
+        "source_tar": "https://downloadgit.teeworlds.wiki/TeeworldsArchive/teeworlds/archive/refs/tags/nightly.tar.gz"
+    }
+]
