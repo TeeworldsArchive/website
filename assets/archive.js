@@ -78,7 +78,7 @@ async function getNews()
             let textResponse = await fetch(`assets/news/${item.date}.${lang}.md`);
             if(!textResponse.ok)
             {
-                textResponse = await fetch(`assets/news/${item.date}.md`);
+                textResponse = await fetch(`assets/news/${item.date}.en.md`);
                 if(!textResponse.ok)
                 {
                     throw new Error(`Couldn't fetch ${textResponse.url}`);
