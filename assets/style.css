@@ -2,30 +2,33 @@
 * {
     margin: 0;
     padding: 0;
+    top: 0;
+    left: 0;
     transition: transform 0.2s ease, padding 0.2s ease;
     font-family: 'Noto Sans SC', 'Source Han Sans', '思源黑体';
 }
 
 .mainview
 {
+    display: flex;
     width: 50%;
-    margin: 5vh auto 0;
-    margin-bottom: 5vh;
-    padding: 3em;
+    margin-left: 23vw;
+    margin-top: 5vh;
+    padding: 2vw;
     border-radius: 0.8em;
+    border-top-left-radius: 0;
     background-color: whitesmoke;
     box-shadow: 0 12px 12px rgba(0,0,0,0.1);
-    position: relative;
-    min-height: 70vh;
+    min-height: 60vh;
     color: #333;
-    font-size: 75%;
+    font-size: 0.6vw;
 }
 
 .headers {
     display: flex;
     justify-content: left;
     gap: 8px;
-    margin: 0 auto 0;
+    margin-left: 23vw;
     width: 50%;
     position: relative;
     top: 5vh;
@@ -46,8 +49,8 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 5vh;
-    width: 5vh;
+    height: 2vw;
+    width: 2vw;
 }
 
 .headers .logo p {
@@ -82,8 +85,6 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    top: 0;
-    left: 0;
 }
 
 .headers a.active {
@@ -95,14 +96,16 @@
 }
 
 .news .date-author {
-    font-size: 75%;
+    font-size: 90%;
     color: #555;
 }
 
-.news h1 {
+.news h1,
+.download h1 {
     color: #AA7700;
     margin-top: 1vh;
     margin-bottom: 0.5vh;
+    font-size: 200%;
 }
 
 .download {
@@ -113,18 +116,13 @@
 
 .download .date {
     display: inline;
-    font-size: 60%;
+    font-size: 90%;
     color: #AA7700;
 }
 
 .download .description {
     display: inline;
     color: #555;
-}
-
-.download h1 {
-    color: #AA7700;
-    margin-bottom: 0.5vh;
 }
 
 .download .download-links {
@@ -140,7 +138,6 @@
 }
 
 .download a {
-    font-size: 60%;
     text-decoration: none;
     color: #552200;
     display: block;
@@ -158,7 +155,7 @@
     text-align: center;
     padding: 10px 0;
     color: #333;
-    font-size: 1em;
+    font-size: 0.5vw;
     font: bold;
     z-index: 1000;
 }
