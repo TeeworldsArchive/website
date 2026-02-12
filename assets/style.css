@@ -45,7 +45,7 @@
 }
 
 .headers .logo .icon {
-    background-image: url("icon.png");
+    background-image: url("icon.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
