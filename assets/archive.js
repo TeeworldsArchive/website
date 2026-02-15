@@ -4,6 +4,17 @@ function getBrowserLanguage()
   return lang.split('-')[0].toLowerCase();
 }
 
+function hideElement(element)
+{
+    element.classList.add("preload");
+}
+
+function showElement(element)
+{
+    if(element.classList.contains("preload"))
+        element.classList.remove("preload");
+}
+
 async function applyTranslations()
 {
     const lang = getBrowserLanguage();
@@ -38,6 +49,7 @@ async function applyTranslations()
             {
                 console.warn(`No translation found for: '${originalText}'`);
             }
+            showElement(element);
         });
     }
     catch (error)
@@ -67,6 +79,7 @@ async function getNews()
                 const itemTitle = document.createElement("h1");
                 itemTitle.textContent = item.title;
                 itemTitle.className = "l10n";
+                hideElement(itemTitle)
                 itemNews.appendChild(itemTitle);
             }
             {
@@ -145,6 +158,7 @@ async function getDownload()
                     itemSource.className = "l10n";
                     itemSource.textContent = "Source (zip)";
                     itemSource.href = item.source_zip;
+                    hideElement(itemSource)
                     itemDownloadLinks.appendChild(itemSource);
                 }
                 {
@@ -152,6 +166,7 @@ async function getDownload()
                     itemSource.className = "l10n";
                     itemSource.textContent = "Source (tar.gz)";
                     itemSource.href = item.source_tar;
+                    hideElement(itemSource)
                     itemDownloadLinks.appendChild(itemSource);
                 }
                 itemDownload.appendChild(itemDownloadLinks);
@@ -168,6 +183,7 @@ async function getDownload()
                     const itemDateDesc = document.createElement("p");
                     itemDateDesc.className = "date l10n";
                     itemDateDesc.textContent = "Build date:";
+                    hideElement(itemDateDesc)
                     itemDownloadInfo.appendChild(itemDateDesc);
                 }
                 {

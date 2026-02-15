@@ -8,6 +8,10 @@
     font-family: 'Noto Sans SC', 'Source Han Sans', '思源黑体';
 }
 
+.preload {
+    visibility: hidden;
+}
+
 .mainview
 {
     display: flex;
@@ -32,6 +36,7 @@
     width: 50%;
     position: relative;
     top: 5vh;
+    font-size: 1vw;
 }
 
 .headers .logo {
