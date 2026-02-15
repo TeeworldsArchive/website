@@ -47,7 +47,7 @@ async function applyTranslations()
     }
     catch (error)
     {
-        console.error("[l10n] Error loading translations: ", error);
+        console.warn("[l10n] Error loading translations: ", error);
     }
 }
 
@@ -65,7 +65,8 @@ async function getNews()
         const newsList = await response.json();
         const page = document.getElementById("page");
         const markdown = markdownit({html: true, linkify: true, typographer: true})
-        newsList.forEach(async item => {
+        for(const item of newsList) 
+        {
             const itemNews = document.createElement("div");
             itemNews.className = "news"
             {
@@ -97,7 +98,7 @@ async function getNews()
             }
             hideElement(itemNews);
             page.appendChild(itemNews);
-        });
+        };
     }
     catch (error)
     {
@@ -122,7 +123,7 @@ async function getDownload()
         }
         const downloadList = await response.json();
         const page = document.getElementById("page");
-        downloadList.forEach(async item => {
+        downloadList.forEach(item => {
             const itemDownload = document.createElement("div");
             itemDownload.className = "download"
             {
