@@ -9,12 +9,6 @@ function hideElement(element)
     element.classList.add("preload");
 }
 
-function showElement(element)
-{
-    if(element.classList.contains("preload"))
-        element.classList.remove("preload");
-}
-
 async function applyTranslations()
 {
     const lang = getBrowserLanguage();
@@ -34,7 +28,7 @@ async function applyTranslations()
         translationList.forEach(item => {
             translationMap.set(item.key, item.value);
         });
-        const elements = document.querySelectorAll(".l10n");
+        let elements = document.querySelectorAll(".l10n");
 
         elements.forEach(element =>
         {
@@ -49,8 +43,7 @@ async function applyTranslations()
             {
                 console.warn(`No translation found for: '${originalText}'`);
             }
-            showElement(element);
-        });
+        })
     }
     catch (error)
     {
@@ -79,7 +72,6 @@ async function getNews()
                 const itemTitle = document.createElement("h1");
                 itemTitle.textContent = item.title;
                 itemTitle.className = "l10n";
-                hideElement(itemTitle)
                 itemNews.appendChild(itemTitle);
             }
             {
@@ -103,6 +95,7 @@ async function getNews()
                 itemText.innerHTML = markdown.render(text);
                 itemNews.appendChild(itemText);
             }
+            hideElement(itemNews);
             page.appendChild(itemNews);
         });
     }
@@ -158,7 +151,6 @@ async function getDownload()
                     itemSource.className = "l10n";
                     itemSource.textContent = "Source (zip)";
                     itemSource.href = item.source_zip;
-                    hideElement(itemSource)
                     itemDownloadLinks.appendChild(itemSource);
                 }
                 {
@@ -166,7 +158,6 @@ async function getDownload()
                     itemSource.className = "l10n";
                     itemSource.textContent = "Source (tar.gz)";
                     itemSource.href = item.source_tar;
-                    hideElement(itemSource)
                     itemDownloadLinks.appendChild(itemSource);
                 }
                 itemDownload.appendChild(itemDownloadLinks);
@@ -183,7 +174,6 @@ async function getDownload()
                     const itemDateDesc = document.createElement("p");
                     itemDateDesc.className = "date l10n";
                     itemDateDesc.textContent = "Build date:";
-                    hideElement(itemDateDesc)
                     itemDownloadInfo.appendChild(itemDateDesc);
                 }
                 {
@@ -201,6 +191,7 @@ async function getDownload()
                 }
                 itemDownload.appendChild(itemDownloadInfo);
             }
+            hideElement(itemDownload);
             page.appendChild(itemDownload);
         });
     }
@@ -228,5 +219,11 @@ async function doPage()
 async function initArchiveScript()
 {
     await doPage();
-    applyTranslations();
+    await applyTranslations();
+
+    elements = document.querySelectorAll(".preload");
+    elements.forEach(element =>
+    {
+        element.classList.remove("preload");
+    });
 }
