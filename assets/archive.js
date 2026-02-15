@@ -205,8 +205,8 @@ async function doPage()
 {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const pageID = urlParams.get("page");
-    if(pageID === "news" || pageID === null)
+    const pageID = urlParams.get("page") ?? "news";
+    if(pageID === "news")
     {
         await getNews();
     }
