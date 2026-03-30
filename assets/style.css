@@ -30,6 +30,7 @@
     font-size: 0.6vw;
     z-index: 1;
     position: relative;
+    flex-direction: column;
 }
 
 .headers {
@@ -108,6 +109,11 @@
 
 .news {
     margin-bottom: 2vh;
+}
+
+.news a {
+    text-decoration: none;
+    color: #AA7700;
 }
 
 .news .date-author {
