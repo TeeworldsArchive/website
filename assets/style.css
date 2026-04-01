@@ -45,7 +45,7 @@
 
 .headers .logo {
     display: flex;
-    background-image: url("logo.svg");
+    background-image: url("logo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
