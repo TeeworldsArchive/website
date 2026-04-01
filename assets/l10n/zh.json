@@ -8,6 +8,10 @@
         "value": "下载"
     },
     {
+        "key": "Contact & Team",
+        "value": "联系与团队"
+    },
+    {
         "key": "Legacy versionsrv has been deprecated",
         "value": "UDP的版本检查服务器已被弃用"
     },
@@ -26,6 +30,14 @@
     {
         "key": "Source (zip)",
         "value": "源代码（zip）"
+    },
+    {
+        "key": "Ingame Name:",
+        "value": "游戏内昵称："
+    },
+    {
+        "key": "Email:",
+        "value": "电子邮箱："
     },
     {
         "key": "Copyright (C) Teeworlds Archive Project Contributors",

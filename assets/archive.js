@@ -202,6 +202,84 @@ async function getDownload()
     }
 }
 
+async function getContact()
+{
+    const lang = getBrowserLanguage();
+
+    try
+    {
+        let response = await fetch(`/assets/contact/${lang}.json`);
+        if(!response.ok)
+        {
+            response = await fetch("/assets/contact/en.json");
+            if(!response.ok)
+            {
+                throw new Error(`Couldn't fetch ${response.url}`);
+            }
+        }
+        const contactList = await response.json();
+        const page = document.getElementById("page");
+        contactList.forEach(item => {
+            const itemContact = document.createElement("div");
+            itemContact.className = "contact"
+            {
+                const itemName = document.createElement("h1");
+                itemName.textContent = item.nickname;
+                itemContact.appendChild(itemName);
+            }
+            {
+                const itemPosition = document.createElement("p");
+                itemPosition.className = "position";
+                itemPosition.textContent = item.position;
+                itemContact.appendChild(itemPosition);
+            }
+            {
+                const itemList = document.createElement("div");
+
+                const itemIngameNameDesc = document.createElement("p");
+                itemIngameNameDesc.className = "ingame l10n";
+                itemIngameNameDesc.textContent = "Ingame Name:";
+                itemList.appendChild(itemIngameNameDesc);
+
+                const itemName = document.createElement("p");
+                itemName.className = "ingame";
+                itemName.textContent = item.ingame_name;
+                itemList.appendChild(itemName);
+
+                itemContact.appendChild(itemList)
+            }
+            if(item.email != null)
+            {
+                const itemList = document.createElement("div");
+
+                const itemEmailDesc = document.createElement("p");
+                itemEmailDesc.className = "email l10n";
+                itemEmailDesc.textContent = "Email:";
+                itemList.appendChild(itemEmailDesc);
+
+                const itemEmail = document.createElement("p");
+                itemEmail.className = "email";
+                itemEmail.textContent = item.email;
+                itemList.appendChild(itemEmail);
+
+                itemContact.appendChild(itemList)
+            }
+            {
+                const itemOthers = document.createElement("p");
+                itemOthers.className = "others";
+                itemOthers.textContent = item.others;
+                itemContact.appendChild(itemOthers);
+            }
+            hideElement(itemContact);
+            page.appendChild(itemContact);
+        });
+    }
+    catch (error)
+    {
+        console.error("[Download] Could not get news list: ", error);
+    }
+}
+
 async function doPage()
 {
     const queryString = window.location.search;
@@ -214,6 +292,10 @@ async function doPage()
     else if(pageID == "download")
     {
         await getDownload();
+    }
+    else if(pageID == "contact")
+    {
+        await getContact();
     }
 }
 

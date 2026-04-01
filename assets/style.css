@@ -6,7 +6,7 @@
     left: 0;
     opacity: 1;
     transition: transform 0.2s ease, padding 0.2s ease, opacity 0.3s ease;
-    font-family: 'Noto Sans SC', 'Source Han Sans', '思源黑体';
+    font-family: 'Source Han Sans', '思源黑体';
 }
 
 .preload {
@@ -17,55 +17,46 @@
 .mainview
 {
     display: flex;
-    width: 50%;
-    margin-left: 23vw;
-    margin-top: 5vh;
-    padding: 2vw;
+    width: 800px;
+    margin: auto;
+    margin-top: 64px;
+    padding: 32px;
     border-radius: 0.8em;
-    border-top-left-radius: 0;
     background-color: whitesmoke;
     box-shadow: 0 12px 12px rgba(0,0,0,0.1);
     min-height: 60vh;
     color: #333;
-    font-size: 0.6vw;
+    font-size: 12px;
     z-index: 1;
     position: relative;
     flex-direction: column;
 }
 
 .headers {
+    width: 800px;
     display: flex;
-    justify-content: left;
+    align-items: flex-start;
     gap: 8px;
-    margin-left: 23vw;
-    width: 50%;
+    margin: auto;
     position: relative;
-    top: 5vh;
-    font-size: 1vw;
+    top: 64px;
+    font-size: 16px;
 }
 
 .headers .logo {
     display: flex;
-    background: whitesmoke;
-    border-bottom: none;
-    border-radius: 0.5em 0.5em 0 0;
-    padding-right: 0.5em;
-    transform: translateY(4px);
-    align-items: center;
-}
-
-.headers .logo .icon {
-    background-image: url("icon.svg");
+    background-image: url("logo.svg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 2vw;
-    width: 2vw;
+    width: 16em;
+    height: 4em;
 }
 
-.headers .logo p {
-    color: #333;
-    font-weight: bold;
+.headers .links {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
 }
 
 .headers a {
@@ -76,17 +67,17 @@
     border-bottom: none;
     border-radius: 0.5em 0.5em 0 0;
     font-weight: bold;
-    transform: translateY(4px);
+    transform: translateY(2em);
     z-index: 0;
 }
 
 .headers a.preload {
     opacity: 1;
-    transform: translateY(3vw);
+    transform: translateY(4em);
 }
 
 .headers a:hover {
-    transform: translateY(0);
+    transform: translateY(1.5em);
 }
 
 .background {
@@ -108,7 +99,7 @@
 }
 
 .news {
-    margin-bottom: 2vh;
+    margin-bottom: 24px;
 }
 
 .news a {
@@ -122,15 +113,16 @@
 }
 
 .news h1,
-.download h1 {
+.download h1,
+.contact h1 {
     color: #AA7700;
-    margin-top: 1vh;
-    margin-bottom: 0.5vh;
+    margin-top: 12px;
+    margin-bottom: 6px;
     font-size: 200%;
 }
 
 .download {
-    margin-bottom: 2vh;
+    margin-bottom: 24px;
     display: flex;
     align-items: flex-start;
 }
@@ -148,8 +140,8 @@
 
 .download .download-links {
     gap: 1em;
-    margin-top: 2vh;
-    margin-bottom: 0.5em;
+    margin-top: 12px;
+    margin-bottom: 6px;
     padding-right: 0.8vw;
     border-right: 2px solid #ccc;
 }
@@ -168,6 +160,35 @@
     transform: translateY(-2px);
 }
 
+.contact {
+    margin-bottom: 24px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #AA7700;
+}
+
+.contact .position {
+    text-decoration: none;
+    color: #AA7700;
+}
+
+.contact .ingame {
+    display: inline;
+    color: #555;
+}
+
+.contact .email {
+    display: inline;
+    color: #552200;
+}
+
+.contact .others {
+    display: inline;
+    color: #555;
+}
+
 .copyleft {
     position: static;
     bottom: 0;
@@ -176,7 +197,7 @@
     text-align: center;
     padding: 10px 0;
     color: #333;
-    font-size: 0.5vw;
+    font-size: 12px;
     font: bold;
     z-index: 1000;
 }
