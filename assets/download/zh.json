@@ -8,5 +8,15 @@
         "macos": "https://downloadgit.teeworlds.wiki/https://github.com/TeeworldsArchive/teeworlds/releases/download/nightly/teeworlds-archive-0.7.6-macos.dmg",
         "source_zip": "https://downloadgit.teeworlds.wiki/https://github.com/TeeworldsArchive/teeworlds/archive/refs/tags/nightly.zip",
         "source_tar": "https://downloadgit.teeworlds.wiki/https://github.com/TeeworldsArchive/teeworlds/archive/refs/tags/nightly.tar.gz"
+    },
+    {
+        "version": "0.7.6",
+        "date": "2026-04-30",
+        "description": "0.7.6的起点",
+        "windows": "https://downloadgit.teeworlds.wiki/https://github.com/TeeworldsArchive/teeworlds/releases/download/0.7.6/teeworlds-archive-0.7.6-win64.zip",
+        "linux": "https://downloadgit.teeworlds.wiki/https://github.com/TeeworldsArchive/teeworlds/releases/download/0.7.6/teeworlds-archive-0.7.6-linux_x86_64.tar.xz",
+        "macos": "https://downloadgit.teeworlds.wiki/https://github.com/TeeworldsArchive/teeworlds/releases/download/0.7.6/teeworlds-archive-0.7.6-macos.dmg",
+        "source_zip": "https://downloadgit.teeworlds.wiki/https://github.com/TeeworldsArchive/teeworlds/archive/refs/tags/0.7.6.zip",
+        "source_tar": "https://downloadgit.teeworlds.wiki/https://github.com/TeeworldsArchive/teeworlds/archive/refs/tags/0.7.6.tar.gz"
     }
 ]
