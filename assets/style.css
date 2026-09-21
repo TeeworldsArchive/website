@@ -107,6 +107,16 @@
     color: #AA7700;
 }
 
+.news ul li {
+    display: list-item;
+    list-style-position: inside;
+}
+
+.news ul li::marker {
+    font-size: 80%;
+}
+
+
 .news .date-author {
     font-size: 90%;
     color: #555;
